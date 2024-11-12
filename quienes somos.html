@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAVEX Imprenta - Quiénes Somos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary-color: #1a4d8c;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --light-bg: #f8f9fa;
+            --dark-bg: #2c3e50;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/api/placeholder/1920/600');
+            height: 70vh;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 2rem;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            line-height: 1.6;
+        }
+
+        /* Contenedores y Secciones */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-padding {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            padding-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--accent-color);
+        }
+
+        /* Servicios */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .service-content {
+            padding: 1.5rem;
+        }
+
+        .service-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Equipo */
+        .team-section {
+            background: var(--light-bg);
+            padding: 5rem 0;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .team-member {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .team-member img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .team-info {
+            padding: 1.5rem;
+        }
+
+        .team-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Historia */
+        .history-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .history-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .history-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        /* Infraestructura */
+        .infrastructure {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin: 4rem 0;
+        }
+
+        .infra-item {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .infra-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        /* Contacto */
+        .contact-section {
+            background: var(--dark-bg);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            padding: 1.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .section-padding {
+                padding: 3rem 0;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>TAVEX Imprenta</h1>
+            <p>Liderando la innovación en soluciones de impresión en El Salvador desde hace más de 20 años</p>
+        </div>
+    </section>
+
+    </section>
+
+    <section class="section-padding team-section">
+        <div class="container">
+            <h2 class="section-title">Nuestra Historia</h2>
+            <div class="history-grid">
+                <div class="history-card">
+                    <h3>Nuestra Misión</h3>
+                    <p>Brindar soluciones integrales de impresión y servicios gráficos de la más alta calidad, superando las expectativas de nuestros clientes a través de la innovación constante y el compromiso con la excelencia.</p>
+                </div>
+                <div class="history-card">
+                    <h3>Nuestra Visión</h3>
+                    <p>Ser reconocidos como la empresa líder en la industria de artes gráficas en El Salvador y Centroamérica, destacándonos por nuestra innovación, calidad y compromiso con el desarrollo sostenible del sector.</p>
+                </div>
+                <div class="history-card">
+                    <h3>Nuestros Valores</h3>
+                    <ul style="list-style-position: inside; margin-top: 1rem;">
+                        <li>Excelencia en cada proyecto</li>
+                        <li>Innovación constante</li>
+                        <li>Compromiso con el cliente</li>
+                        <li>Responsabilidad ambiental</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Nuestra Infraestructura</h2>
+            <div class="infrastructure">
+                <div class="infra-item">
+                    <img src="/api/placeholder/400/300" alt="Maquinaria Moderna">
+                    <h3>Maquinaria Moderna</h3>
+                    <p>Contamos con la última tecnología en impresión offset y digital.</p>
+                </div>
+                <div class="infra-item">
+                    <img src="/api/placeholder/400/300" alt="Instalaciones">
+                    <h3>Amplias Instalaciones</h3>
+                    <p>Más de 2000 metros cuadrados dedicados a la producción.</p>
+                </div>
+                <div class="infra-item">
+                    <img src="/api/placeholder/400/300" alt="Control de Calidad">
+                    <h3>Control de Calidad</h3>
+                    <p>Laboratorio especializado para garantizar la calidad de cada impresión.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Contáctanos</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <h3>Dirección</h3>
+                    <p>San Salvador, El Salvador</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Teléfono</h3>
+                    <p>+503 2222-2222</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <p>info@tavex.com.sv</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
